@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Ril 4080051 - Begriffe</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+>
+
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<nav class="bg-gray-900 p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+
+        <div class="text-xl font-bold">
+            Ril 4080051 - Begriffe
+        </div>
+
+        <!-- Mobile Menü -->
+        <button
+            id="menu-toggle"
+            class="md:hidden"
+            aria-label="Menü öffnen"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul id="menu" class="hidden md:flex md:space-x-4">
+            <li>
+                <a
+                    href="index.html"
+                    class="flex items-center hover:text-blue-400 transition-colors"
+                >
+                    <i class="fas fa-home mr-1"></i>
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://share.google/xE9ILkuCldPHzg82C"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center hover:text-blue-400 transition-colors"
+                >
+                    <i class="fas fa-book mr-1"></i>
+                    Ril 4080051
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- Hauptbereich -->
+<main class="app">
+
+    <!-- Kopfbereich -->
+    <div class="header-controls">
+        <div id="question-counter">
+            Begriff 1 von 1
+        </div>
+    </div>
+
+    <!-- Fortschrittsbalken (kann eigentlich auch weg) -->
+    <div id="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+
+    <!-- Lernkarte -->
+    <section class="quiz">
+
+        <!-- Begriff -->
+        <h2 id="question">
+            Begriff wird geladen ...
+        </h2>
+
+
+        <!-- Lösung -->
+        <div id="solution-container">
+
+            <button id="solution-btn" class="solution-btn">
+                <i class="fas fa-eye"></i>
+                Lösung anzeigen
+            </button>
+
+            <div
+                id="explanation"
+                class="explanation"
+                aria-live="polite"
+            ></div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="button-container">
+
+            <button id="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Zurück
+            </button>
+
+            <button id="next-btn">
+                Nächster
+                <i class="fas fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- Script -->
+<script type="module" src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+/* ============================================================
+Grundlayout
+============================================================ */
+
+* {
+  box-sizing: border-box;
+  }
+
+html,
+body {
+min-height: 100%;
+}
+
+body {
+margin: 0;
+padding: 0;
+
+
+font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+color: #ffffff;
+
+/* Ursprünglicher Hintergrundverlauf */
+background: linear-gradient(
+    to top left,
+    #8c8a8f,
+    #6f6877,
+    #47445a,
+    #332b3b
+);
+
+background-attachment: fixed;
+
+
+}
+
+/* ============================================================
+Navigation
+============================================================ */
+
+nav {
+background-color: #1a222a49;
+padding: 1rem;
+
+
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+nav .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+max-width: 1200px;
+margin: 0 auto;
+
+flex-wrap: wrap;
+
+
+}
+
+nav .text-xl {
+font-size: 1.25rem;
+font-weight: bold;
+color: #ffffff;
+}
+
+nav ul {
+display: flex;
+gap: 1rem;
+
+
+list-style: none;
+padding: 0;
+margin: 0;
+
+
+}
+
+nav a {
+color: #ffffff;
+text-decoration: none;
+
+
+transition: color 0.3s;
+
+
+}
+
+nav a:hover {
+color: #60a5fa;
+}
+
+/* ============================================================
+Mobiles Menü
+============================================================ */
+
+#menu-toggle {
+display: none;
+
+
+background: none;
+border: none;
+
+color: #ffffff;
+font-size: 1.5rem;
+
+cursor: pointer;
+
+
+}
+
+#menu-toggle:hover {
+color: #60a5fa;
+}
+
+/* ============================================================
+Hauptbereich
+============================================================ */
+
+.app {
+width: 90%;
+max-width: 600px;
+
+
+margin: 1rem auto 40px;
+
+padding: 20px;
+
+background: rgba(255, 255, 255, 0.2);
+
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+border-radius: 10px;
+
+
+}
+
+/* ============================================================
+Kopfbereich / Begriffzähler
+============================================================ */
+
+.header-controls {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+
+margin-bottom: 20px;
+
+
+}
+
+#question-counter {
+font-size: 13px;
+font-weight: 500;
+
+
+color: #ffffffda;
+
+padding: 7px;
+
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
+
+
+}
+
+/* ============================================================
+Fortschrittsbalken
+============================================================ */
+
+#progress-bar {
+width: 100%;
+
+
+margin-bottom: 5px;
+
+background-color: #f3f3f3;
+
+border: 1px solid #ddd;
+padding: 1px;
+
+border-radius: 5px;
+
+
+}
+
+#progress {
+width: 0;
+height: 6px;
+
+
+background-color: #196ea2;
+
+padding: 1px;
+
+border-radius: 5px;
+
+transition: width 0.8s ease-out;
+
+
+}
+
+/* ============================================================
+Lernbereich
+============================================================ */
+
+.quiz {
+padding: 20px 0;
+}
+
+.quiz h2 {
+font-size: 17px;
+font-weight: 500;
+
+
+color: #ffffff;
+
+margin: 20px 0;
+
+text-align: left;
+
+font-family:
+    "Whitney",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+
+}
+
+/* ============================================================
+Lösung
+============================================================ */
+
+#solution-container {
+width: 100%;
+}
+
+/* Button zum Anzeigen der Lösung */
+
+.solution-btn {
+width: 100%;
+
+
+padding: 10px;
+
+margin: 3px 0;
+
+border: 1px solid #222;
+border-radius: 4px;
+
+background: rgba(255, 255, 255, 0.884);
+
+color: #222;
+
+font-family:
+    "Whitney",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+font-size: 14px;
+font-weight: 500;
+
+text-align: left;
+
+cursor: pointer;
+
+transition: all 0.3s;
+
+
+}
+
+.solution-btn:hover {
+background: #1a477771;
+
+
+color: rgba(255, 255, 255, 0.77);
+
+transform: scale(1.03);
+
+font-weight: bold;
+
+
+}
+
+/* Lösungstext */
+
+.explanation {
+display: none;
+
+
+background: rgba(0, 0, 0, 0.3);
+
+padding: 10px;
+
+margin-top: 20px;
+
+border: 1px solid #ffffff69;
+border-radius: 5px;
+
+color: #ffffff;
+
+font-size: 14px;
+line-height: 1.5;
+
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+
+
+}
+
+.explanation:hover {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+transform: scale(1.02);
+
+background-color: rgba(0, 0, 0, 0.623);
+
+
+}
+
+/* ============================================================
+Navigation zwischen Begriffen
+============================================================ */
+
+.button-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+gap: 10px;
+
+margin-top: 20px;
+
+
+}
+
+#next-btn,
+#back-btn {
+font-size: 11.5px;
+font-weight: 500;
+
+
+padding: 7px 10px;
+
+min-width: 80px;
+
+border: 1px solid #141e2c34;
+border-radius: 10px;
+
+color: #ffffff;
+
+background-color: #476ce609;
+
+box-shadow:
+    2.5px 2px 2px 1px rgba(0, 0, 0, 0.26);
+
+cursor: pointer;
+
+transition: transform 0.1s;
+
+
+}
+
+#next-btn:hover,
+#back-btn:hover {
+background: #1a477771;
+
+
+color: rgba(255, 255, 255, 0.77);
+
+transform: scale(1.1);
+
+
+}
+
+/* ============================================================
+Responsive Design
+============================================================ */
+
+@media (max-width: 768px) {
+
+
+#menu-toggle {
+    display: block;
+}
+
+nav ul {
+    display: none;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 1rem;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+nav li {
+    margin-bottom: 0.5rem;
+}
+
+nav .text-xl {
+    font-size: 1.1rem;
+}
+
+nav a {
+    font-size: 0.95rem;
+}
+
+
+}
+
+@media (max-width: 480px) {
+
+
+nav {
+    padding: 0.5rem;
+}
+
+nav .text-xl {
+    font-size: 1rem;
+}
+
+nav a {
+    font-size: 0.9rem;
+}
+
+.app {
+    width: 94%;
+
+    padding: 15px;
+
+    margin-top: 0.75rem;
+}
+
+.quiz h2 {
+    font-size: 16px;
+}
+
+.explanation {
+    font-size: 14px;
+}
+
+#next-btn,
+#back-btn {
+    font-size: 11px;
+
+    min-width: 75px;
+}
+
+
+}
+
+
+.explanation {
+    white-space: pre-line;
+}
