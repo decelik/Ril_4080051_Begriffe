@@ -1,30 +1,6 @@
 export const questions = [
 
 {
-    question: "Bahnhöfe, Bahnhofsteile",
-
-    explanation:
-        `Bahnhöfe sind Bahnanlagen mit mindestens einer Weiche, wo Züge beginnen, enden, halten, kreuzen, überholen oder wenden dürfen. Bahnhöfe können in Bahnhofsteile unterteilt sein. 
-        
-        Bahnhofsteile können durch Zwischensignale bzw. Signale Ne 14 gegeneinander abgegrenzt sein.`
-},
-
-
-{
-    question: "Bedarfshalt",
-
-    explanation:
-        `Ein Bedarfshalt ist ein Fahrplanhalt, bei dem ein Zug auf der Betriebsstelle halten muss, wenn:
-        
-        - der Tf ein Haltsignal oder ein blinkendes Signal Ne 5 erhält,
-
-        - der Tf Reisende bemerkt, die ein- oder aussteigen wollen oder
-
-        - der Tf gemäß den Regeln seines Eisenbahnverkehrsunternehmens nicht verständigt wurde, dass der Halt ausfallen darf.`
-},
-
-
-{
     question: "Ablaufen, Abdrücken",
 
     explanation:
@@ -135,6 +111,15 @@ export const questions = [
 },
 
 {
+    question: "Bahnhöfe, Bahnhofsteile",
+
+    explanation:
+        `Bahnhöfe sind Bahnanlagen mit mindestens einer Weiche, wo Züge beginnen, enden, halten, kreuzen, überholen oder wenden dürfen. Bahnhöfe können in Bahnhofsteile unterteilt sein. 
+        
+        Bahnhofsteile können durch Zwischensignale bzw. Signale Ne 14 gegeneinander abgegrenzt sein.`
+},
+
+{
     question: "Balise, Balisengruppe",
 
     explanation:
@@ -144,6 +129,20 @@ export const questions = [
 
         Bei Neigetechnik übertragen Balisen Informationen für die Geschwindigkeitsüberwachung für Neigetechnik.`
 },
+
+{
+    question: "Bedarfshalt",
+
+    explanation:
+        `Ein Bedarfshalt ist ein Fahrplanhalt, bei dem ein Zug auf der Betriebsstelle halten muss, wenn:
+        
+        - der Tf ein Haltsignal oder ein blinkendes Signal Ne 5 erhält,
+
+        - der Tf Reisende bemerkt, die ein- oder aussteigen wollen oder
+
+        - der Tf gemäß den Regeln seines Eisenbahnverkehrsunternehmens nicht verständigt wurde, dass der Halt ausfallen darf.`
+},
+
 
 {
     question: "Beidrücken",
