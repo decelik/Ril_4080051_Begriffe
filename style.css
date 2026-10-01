@@ -1,12 +1,13 @@
+css
 /* ============================================================
 Grundlayout
 ============================================================ */
 
 * {
   box-sizing: border-box;
-  }
+}
 
- html {
+html {
   min-height: 100%;
   background: linear-gradient(
     to top left,
@@ -17,11 +18,11 @@ Grundlayout
   );
 }
 
-
 body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+
   font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   background: linear-gradient(
@@ -36,358 +37,386 @@ body {
   background-size: cover;
 }
 
+
 /* ============================================================
 Navigation
 ============================================================ */
 
 nav {
-background-color: #1a222a49;
-padding: 1rem;
+  background-color: #1a222a49;
+  padding: 1rem;
 
-
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  max-width: 1200px;
+  margin: 0 auto;
 
-max-width: 1200px;
-margin: 0 auto;
-
-flex-wrap: wrap;
-
-
+  flex-wrap: wrap;
 }
 
 nav .text-xl {
-font-size: 1.25rem;
-font-weight: bold;
-color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 nav ul {
-display: flex;
-gap: 1rem;
+  display: flex;
+  gap: 1rem;
 
-
-list-style: none;
-padding: 0;
-margin: 0;
-
-
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
-color: #ffffff;
-text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 
-
-transition: color 0.3s;
-
-
+  transition: color 0.3s;
 }
 
 nav a:hover {
-color: #60a5fa;
+  color: #60a5fa;
 }
+
 
 /* ============================================================
 Mobiles Menü
 ============================================================ */
 
 #menu-toggle {
-display: none;
+  display: none;
 
+  background: none;
+  border: none;
 
-background: none;
-border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
 
-color: #ffffff;
-font-size: 1.5rem;
-
-cursor: pointer;
-
-
+  cursor: pointer;
 }
 
 #menu-toggle:hover {
-color: #60a5fa;
+  color: #60a5fa;
 }
+
 
 /* ============================================================
 Hauptbereich
 ============================================================ */
 
 .app {
-width: 90%;
-max-width: 600px;
+  width: 90%;
+  max-width: 600px;
 
+  margin: 1rem auto 40px;
+  padding: 20px;
 
-margin: 1rem auto 40px;
+  background: rgba(255, 255, 255, 0.2);
 
-padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
-background: rgba(255, 255, 255, 0.2);
-
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-
-border-radius: 10px;
-
-
+  border-radius: 10px;
 }
+
 
 /* ============================================================
 Kopfbereich / Begriffzähler
 ============================================================ */
 
 .header-controls {
-display: flex;
-justify-content: flex-end;
-align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-
-margin-bottom: 20px;
-
-
+  margin-bottom: 20px;
 }
 
 #question-counter {
-font-size: 13px;
-font-weight: 500;
+  font-size: 13px;
+  font-weight: 500;
 
+  color: #ffffffda;
 
-color: #ffffffda;
+  padding: 7px;
 
-padding: 7px;
-
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
-
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
 }
+
 
 /* ============================================================
 Fortschrittsbalken
 ============================================================ */
 
 #progress-bar {
-width: 100%;
+  width: 100%;
 
+  margin-bottom: 5px;
 
-margin-bottom: 5px;
+  background-color: #f3f3f3;
 
-background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 1px;
 
-border: 1px solid #ddd;
-padding: 1px;
-
-border-radius: 5px;
-
-
+  border-radius: 5px;
 }
 
 #progress {
-width: 0;
-height: 6px;
+  width: 0;
+  height: 6px;
 
+  background-color: #196ea2;
 
-background-color: #196ea2;
+  padding: 1px;
 
-padding: 1px;
+  border-radius: 5px;
 
-border-radius: 5px;
-
-transition: width 0.8s ease-out;
-
-
+  transition: width 0.8s ease-out;
 }
+
 
 /* ============================================================
 Lernbereich
 ============================================================ */
 
 .quiz {
-padding: 20px 0;
+  padding: 25px 0 10px;
 }
 
+/* Kleine Überschrift über dem Begriff */
+
+.quiz::before {
+  content: "BEGRIFF";
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* Eigentliche Frage / Begriff */
+
 .quiz h2 {
-font-size: 17px;
-font-weight: 500;
+  margin: 0 0 30px;
 
+  color: #ffffff;
 
-color: #ffffff;
-
-margin: 20px 0;
-
-text-align: left;
-
-font-family:
+  font-family:
     "Whitney",
     "Helvetica Neue",
     Helvetica,
     Arial,
     sans-serif;
 
+  font-size: 1.65rem;
+  line-height: 1.3;
 
+  font-weight: 600;
+
+  text-align: left;
 }
+
 
 /* ============================================================
 Lösung
 ============================================================ */
 
 #solution-container {
-width: 100%;
+  width: 100%;
+  margin: 0 0 20px;
 }
+
 
 /* Button zum Anzeigen der Lösung */
 
 .solution-btn {
-width: 100%;
+  width: 100%;
 
+  padding: 13px 18px;
 
-padding: 10px;
+  background: rgba(255, 255, 255, 0.12);
 
-margin: 3px 0;
+  color: #ffffff;
 
-border: 1px solid #222;
-border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
 
-background: rgba(255, 255, 255, 0.884);
-
-color: #222;
-
-font-family:
+  font-family:
     "Whitney",
     "Helvetica Neue",
     Helvetica,
     Arial,
     sans-serif;
 
-font-size: 14px;
-font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
 
-text-align: left;
+  text-align: center;
 
-cursor: pointer;
+  cursor: pointer;
 
-transition: all 0.3s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 
-
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .solution-btn:hover {
-background: #1a477771;
+  background: rgba(255, 255, 255, 0.2);
 
+  border-color: rgba(255, 255, 255, 0.45);
 
-color: rgba(255, 255, 255, 0.77);
-
-transform: scale(1.03);
-
-font-weight: bold;
-
-
+  transform: translateY(-1px);
 }
 
-/* Lösungstext */
+.solution-btn:active {
+  transform: translateY(0);
+}
+
+
+/* ============================================================
+Lösungstext / Definition
+============================================================ */
 
 .explanation {
-display: none;
+  display: none;
 
+  position: relative;
 
-background: rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
 
-padding: 10px;
+  padding: 20px 20px 21px;
 
-margin-top: 20px;
+  background: rgba(0, 0, 0, 0.22);
 
-border: 1px solid #ffffff69;
-border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-color: #ffffff;
+  border-left: 3px solid rgba(255, 255, 255, 0.55);
 
-font-size: 14px;
-line-height: 1.5;
+  border-radius: 10px;
 
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.94);
 
-transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
+  font-family:
+    "Whitney",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
 
+  font-size: 1rem;
+  line-height: 1.65;
 
+  font-weight: 400;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+
+  white-space: pre-line;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
+
+/* Kleine Überschrift innerhalb der Definition */
+
+.explanation::before {
+  content: "DEFINITION";
+
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* Dezenter Hover-Effekt */
 
 .explanation:hover {
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.27);
 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 
-transform: scale(1.02);
-
-background-color: rgba(0, 0, 0, 0.623);
-
-
+  /* Kein Vergrößern mehr */
+  transform: none;
 }
+
 
 /* ============================================================
 Navigation zwischen Begriffen
 ============================================================ */
 
 .button-container {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  gap: 10px;
 
-gap: 10px;
-
-margin-top: 20px;
-
-
+  margin-top: 20px;
 }
 
 #next-btn,
 #back-btn {
-font-size: 11.5px;
-font-weight: 500;
+  font-size: 11.5px;
+  font-weight: 500;
 
+  padding: 7px 10px;
 
-padding: 7px 10px;
+  min-width: 80px;
 
-min-width: 80px;
+  border: 1px solid #141e2c34;
+  border-radius: 10px;
 
-border: 1px solid #141e2c34;
-border-radius: 10px;
+  color: #ffffff;
 
-color: #ffffff;
+  background-color: #476ce609;
 
-background-color: #476ce609;
-
-box-shadow:
+  box-shadow:
     2.5px 2px 2px 1px rgba(0, 0, 0, 0.26);
 
-cursor: pointer;
+  cursor: pointer;
 
-transition: transform 0.1s;
-
-
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.1s ease;
 }
 
 #next-btn:hover,
 #back-btn:hover {
-background: #1a477771;
+  background: #1a477771;
 
+  color: rgba(255, 255, 255, 0.77);
 
-color: rgba(255, 255, 255, 0.77);
-
-transform: scale(1.1);
-
-
+  transform: scale(1.05);
 }
+
 
 /* ============================================================
 Responsive Design
@@ -395,12 +424,11 @@ Responsive Design
 
 @media (max-width: 768px) {
 
-
-#menu-toggle {
+  #menu-toggle {
     display: block;
-}
+  }
 
-nav ul {
+  nav ul {
     display: none;
 
     flex-direction: column;
@@ -408,69 +436,81 @@ nav ul {
     width: 100%;
 
     margin-top: 1rem;
-}
+  }
 
-nav ul.show {
+  nav ul.show {
     display: flex;
-}
+  }
 
-nav li {
+  nav li {
     margin-bottom: 0.5rem;
-}
+  }
 
-nav .text-xl {
+  nav .text-xl {
     font-size: 1.1rem;
-}
+  }
 
-nav a {
+  nav a {
     font-size: 0.95rem;
+  }
 }
 
 
-}
+/* ============================================================
+Sehr kleine Bildschirme
+============================================================ */
 
 @media (max-width: 480px) {
 
-
-nav {
+  nav {
     padding: 0.5rem;
-}
+  }
 
-nav .text-xl {
+  nav .text-xl {
     font-size: 1rem;
-}
+  }
 
-nav a {
+  nav a {
     font-size: 0.9rem;
-}
+  }
 
-.app {
+  .app {
     width: 94%;
 
     padding: 15px;
 
     margin-top: 0.75rem;
-}
+  }
 
-.quiz h2 {
-    font-size: 16px;
-}
+  .quiz {
+    padding-top: 20px;
+  }
 
-.explanation {
-    font-size: 14px;
-}
+  .quiz h2 {
+    font-size: 1.4rem;
+    line-height: 1.35;
 
-#next-btn,
-#back-btn {
+    margin-bottom: 25px;
+  }
+
+  .solution-btn {
+    padding: 12px 15px;
+
+    font-size: 0.9rem;
+  }
+
+  .explanation {
+    padding: 17px 16px 18px;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  #next-btn,
+  #back-btn {
     font-size: 11px;
 
     min-width: 75px;
+  }
 }
 
-
-}
-
-
-.explanation {
-    white-space: pre-line;
-}
