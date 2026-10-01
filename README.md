@@ -56,7 +56,7 @@ Lernorientierte Darstellung: Neben der richtigen Antwort können zusätzliche Er
 
 Installation
 Repository klonen
-git clone https://github.com/decelik/OCFA_Quiz
+git clone https://github.com/decelik/Ril_4080051_Begriffe
 
 
 Anschließend den Projektordner in Visual Studio Code öffnen.
