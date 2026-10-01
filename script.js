@@ -182,7 +182,7 @@ function updateQuestionCounter() {
 
 
 questionCounterElement.textContent =
-    `Begriff ${currentQuestionIndex + 1} von ${questions.length}`;
+    `${currentQuestionIndex + 1} von ${questions.length}`;
 
 
 }

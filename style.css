@@ -193,7 +193,7 @@ Lernbereich
 /* Kleine Überschrift über dem Begriff */
 
 .quiz::before {
-  content: "BEGRIFF";
+  
 
   display: block;
 
@@ -339,8 +339,7 @@ Lösungstext / Definition
 /* Kleine Überschrift innerhalb der Definition */
 
 .explanation::before {
-  content: "DEFINITION";
-
+ 
   display: block;
 
   margin-bottom: 10px;
